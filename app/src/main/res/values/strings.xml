@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">CGSCopy</string>
+    <string name="save">SAVE</string>
+    <string name="processing_image">Processing Image</string>
+    <string name="enable_storage_permission">You should enable your storage permission
+        in the settings for better experience.</string>
+    <string name="storage_permission_needed">You need to grant read/write external
+        storage permission in order to access media.</string>
+    <string name="reading_contacts_permission_required">You should enable read contacts
+        permission to get recommendations from your phonebook contacts.</string>
+    <string name="enable_read_contacts_permission">You should enable read contacts
+        permission in the app settings.</string>
+    <string name="camera_permission_needed">You need to allow camera permission
+        in order to capture photos.</string>
+    <string name="ok">Ok</string>
+    <string name="cancel">Cancel</string>
+    <string name="enable_camera_permission">You should enable your camera permission
+        in the settings for better experience.</string>
+
+    <string-array name="media_options">
+        <item name="gallery">Choose From Gallery</item>
+        <item name="camera">Take Photo</item>
+        <item name="cancel">Cancel</item>
+    </string-array>
+</resources>
