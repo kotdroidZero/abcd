@@ -1,4 +1,4 @@
-package com.error_found.kotdroid.cgscopy.models.networkrequest;
+package com.error_found.kotdroid.cgscopy.models.networkrequests;
 
 import java.util.concurrent.TimeUnit;
 

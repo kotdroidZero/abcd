@@ -1,4 +1,4 @@
-package com.error_found.kotdroid.cgscopy.models.networkrequest;
+package com.error_found.kotdroid.cgscopy.models.networkrequests;
 
 import android.support.annotation.NonNull;
 

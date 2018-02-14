@@ -1,19 +1,15 @@
-package com.error_found.kotdroid.cgscopy.models.networkrequest;
+package com.error_found.kotdroid.cgscopy.models.networkrequests;
 
+
+import com.error_found.kotdroid.cgscopy.models.pojos.PojoLogin;
 
 import java.util.List;
-import java.util.Map;
 
-import okhttp3.MultipartBody;
-import okhttp3.RequestBody;
 import retrofit2.Call;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
-import retrofit2.http.Multipart;
 import retrofit2.http.POST;
-import retrofit2.http.Part;
-import retrofit2.http.PartMap;
 import retrofit2.http.Query;
 
 /**
@@ -24,8 +20,21 @@ public interface API {
 
 
 
+    @GET(WebConstants.GET_ALL_GUESTS)
+    Call<List<PojoLogin>> getGuests(@Query("session_id") String sessionId,
+                                    @Query("status") String status);
 
+    @FormUrlEncoded
+    @POST(WebConstants.CHANGE_GUEST_STATUS)
+    Call<PojoLogin> changeGuestStatus(@Field("session_id") String sessionId,
+                                       @Field("guest_id") Integer guestId,
+                                       @Field("status") Integer guestType);
 
+    @FormUrlEncoded
+    @POST(WebConstants.LOGIN)
+    Call<PojoLogin> loginUser(@Field("email") String email,
+                                  @Field("password") String password,
+                                  @Field("device_type") String deviceType);
 
 
 

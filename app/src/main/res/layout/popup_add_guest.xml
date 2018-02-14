@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#9E9E9E"
+    android:orientation="vertical">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="24dp"
+        android:background="#BDBDBD"
+        fresco:actualImageResource="@drawable/ic_photo_camera_black_24dp"
+        fresco:roundAsCircle="true" />
+    <EditText
+        android:id="@+id/et_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:layout_marginTop="4dp"
+        android:background="#BDBDBD"
+        android:paddingLeft="16dp"
+        android:gravity="center_vertical"
+        android:hint="name"
+        android:paddingBottom="16dp"
+        android:paddingTop="16dp" />
+    <TextView
+        android:id="@+id/tv_gender"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:layout_marginTop="4dp"
+        android:background="#BDBDBD"
+        android:paddingLeft="16dp"
+        android:gravity="center_vertical"
+        android:paddingBottom="16dp"
+        android:paddingTop="16dp"
+        android:text="Gender" />
+
+    <TextView
+        android:id="@+id/tv_set_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:layout_marginTop="4dp"
+        android:background="#BDBDBD"
+        android:paddingLeft="16dp"
+        android:gravity="center_vertical"
+        android:paddingBottom="16dp"
+        android:paddingTop="16dp"
+        android:text="Set Date" />
+
+    <TextView
+        android:id="@+id/tv_set_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:layout_marginTop="4dp"
+        android:background="#BDBDBD"
+        android:paddingLeft="16dp"
+        android:gravity="center_vertical"
+        android:paddingBottom="16dp"
+        android:paddingTop="16dp"
+        android:text="Set Time" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:padding="20dp"
+        android:layout_marginBottom="16dp"
+        android:text="add guest" />
+</LinearLayout>
