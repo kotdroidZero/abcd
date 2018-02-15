@@ -2,7 +2,10 @@ package com.error_found.kotdroid.cgscopy.presenters;
 
 import com.error_found.kotdroid.cgscopy.models.interactors.GuestsInteractor;
 import com.error_found.kotdroid.cgscopy.models.networkrequests.NetworkRequestCallbacks;
+import com.error_found.kotdroid.cgscopy.models.pojos.PojoLogin;
 import com.error_found.kotdroid.cgscopy.views.interfaces.GuestsView;
+
+import java.util.List;
 
 import retrofit2.Response;
 
@@ -23,7 +26,12 @@ public class GuestPresenter {
         if (sessionId.isEmpty()) {
             mGuestsView.sessionIdErr();
         } else {
-            mGuestsInteractor.getGuests(sessionId, status, new NetworkRequestCallbacks() {
+            mGuestsInteractor.getGuestsByRxJava(sessionId, status, new NetworkRequestCallbacks() {
+                @Override
+                public void onSuccess(List<PojoLogin> loginList) {
+
+                }
+
                 @Override
                 public void onSuccess(Response<?> response) {
                     mGuestsView.success(response);
@@ -40,6 +48,11 @@ public class GuestPresenter {
     public void moveGuest(String sessionId, int guestId, final int adapterPosition, final int guestType) {
         mGuestsInteractor.moveGuest(sessionId, guestId, guestType, new NetworkRequestCallbacks() {
             @Override
+            public void onSuccess(List<PojoLogin> loginList) {
+
+            }
+
+            @Override
             public void onSuccess(Response<?> response) {
                 mGuestsView.guestTypeChanged(response);
                 mGuestsView.reloadList(adapterPosition, guestType);
@@ -54,7 +67,12 @@ public class GuestPresenter {
 
 
     public void fetchGuestList(String sessionId, int guestType) {
-        mGuestsInteractor.getGuests(sessionId, guestType + "", new NetworkRequestCallbacks() {
+        mGuestsInteractor.getGuestsByRxJava(sessionId, guestType + "", new NetworkRequestCallbacks() {
+            @Override
+            public void onSuccess(List<PojoLogin> loginList) {
+
+            }
+
             @Override
             public void onSuccess(Response<?> response) {
                 mGuestsView.success(response);

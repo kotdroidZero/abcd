@@ -1,5 +1,9 @@
 package com.error_found.kotdroid.cgscopy.models.networkrequests;
 
+import com.error_found.kotdroid.cgscopy.models.pojos.PojoLogin;
+
+import java.util.List;
+
 import retrofit2.Response;
 
 /**
@@ -8,6 +12,7 @@ import retrofit2.Response;
 
 public interface NetworkRequestCallbacks {
 
+    void onSuccess(List<PojoLogin> loginList);
     void onSuccess(Response<?> response);
     void onError(Throwable t);
 }

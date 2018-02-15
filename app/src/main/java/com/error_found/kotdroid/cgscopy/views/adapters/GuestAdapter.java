@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.PopupMenu;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.error_found.kotdroid.cgscopy.R;
 import com.error_found.kotdroid.cgscopy.models.pojos.PojoLogin;
@@ -18,6 +19,8 @@ import com.error_found.kotdroid.cgscopy.views.fragments.GuestsFragment;
 import com.facebook.drawee.view.SimpleDraweeView;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 import butterknife.BindView;
@@ -56,6 +59,7 @@ public class GuestAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
         ItemHolder itemHolder = (ItemHolder) holder;
         PojoLogin pojoLogin = pojoLoginList.get(position);
+
 
 
         itemHolder.tvGender.setText(pojoLogin.gender);
@@ -142,6 +146,12 @@ public class GuestAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
 
     public void updateList(PojoLogin login) {
         pojoLoginList.add(login);
+        Collections.sort(pojoLoginList, new Comparator<PojoLogin>() {
+            @Override
+            public int compare(PojoLogin login, PojoLogin t1) {
+                return login.name.compareTo(t1.name);
+            }
+        });
         notifyDataSetChanged();
 
     }

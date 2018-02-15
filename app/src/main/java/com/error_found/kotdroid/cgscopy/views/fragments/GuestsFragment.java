@@ -6,6 +6,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v4.content.LocalBroadcastManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -76,7 +77,12 @@ public class GuestsFragment extends BaseFragment implements GuestsView, GuestAda
                 "loading guests", false);
         mGuestPresenter = new GuestPresenter(this);
         guestType = getArguments().getInt(BUNDLE_EXTRA_GUEST_TYPE);
-        mGuestPresenter.getGuests(Constants.SESSION_ID, String.valueOf(guestType));
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                mGuestPresenter.getGuests(Constants.SESSION_ID, String.valueOf(guestType));
+            }
+        },4000);
         mGuestAdapter = new GuestAdapter(this, guestType);
         LinearLayoutManager llm = new LinearLayoutManager(getActivityContext(),
                 LinearLayoutManager.VERTICAL, false);
@@ -110,6 +116,14 @@ public class GuestsFragment extends BaseFragment implements GuestsView, GuestAda
 
         List<PojoLogin> loginList = (List<PojoLogin>) response.body();
         for (PojoLogin login : loginList) {
+            mGuestAdapter.updateList(login);
+        }
+        progressDialog.dismiss();
+    }
+
+    @Override
+    public void success(List<PojoLogin> list) {
+        for (PojoLogin login : list) {
             mGuestAdapter.updateList(login);
         }
         progressDialog.dismiss();

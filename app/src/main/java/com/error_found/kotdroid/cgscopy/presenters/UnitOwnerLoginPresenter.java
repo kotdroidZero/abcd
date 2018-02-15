@@ -6,6 +6,8 @@ import com.error_found.kotdroid.cgscopy.models.pojos.PojoLogin;
 import com.error_found.kotdroid.cgscopy.views.interfaces.UnitOwnerLoginView;
 
 
+import java.util.List;
+
 import retrofit2.Response;
 
 /**
@@ -32,6 +34,11 @@ public class UnitOwnerLoginPresenter {
         } else {
             unitOwnerLoginInteractor.loginToNetwork(email, password, deviceType,
                     new NetworkRequestCallbacks() {
+                        @Override
+                        public void onSuccess(List<PojoLogin> loginList) {
+
+                        }
+
                         @Override
                         public void onSuccess(Response<?> response) {
                             PojoLogin userLogin = (PojoLogin) response.body();

@@ -6,11 +6,13 @@ import com.error_found.kotdroid.cgscopy.models.pojos.PojoLogin;
 import java.util.List;
 
 import retrofit2.Call;
+import retrofit2.Response;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
 import retrofit2.http.Query;
+import io.reactivex.Observable;
 
 /**
  * Created by Mukesh on 06-06-2016.
@@ -23,6 +25,10 @@ public interface API {
     @GET(WebConstants.GET_ALL_GUESTS)
     Call<List<PojoLogin>> getGuests(@Query("session_id") String sessionId,
                                     @Query("status") String status);
+
+    @GET(WebConstants.GET_ALL_GUESTS)
+    Observable<Response<List<PojoLogin>>> getAllGuest(@Query("session_id") String sessionId,
+                                                      @Query("status") String status);
 
     @FormUrlEncoded
     @POST(WebConstants.CHANGE_GUEST_STATUS)

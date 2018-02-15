@@ -6,6 +6,6 @@ package com.error_found.kotdroid.cgscopy.views.utils;
 
 public class Constants {
 
-    public static final String SESSION_ID = "XS5RkEzcVUUYPFDXflW6RSfO1KCuxtDI";
+    public static final String SESSION_ID = "u4apFDE68iyqPRvqWlWaDnh88TdFFrWG";
 
 }
