@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.error_found.kotdroid.cgscopy.views.activities.AnimatorActivity">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+<TextView
+    android:padding="8dp"
+    android:background="@drawable/ball_bg"
+    android:id="@+id/tv_ball"
+    android:layout_width="70dp"
+    android:layout_height="70dp" />
+<TextView
+    android:id="@+id/tv_fade_in"
+    android:gravity="center"
+    android:layout_marginTop="20dp"
+    android:textSize="20sp"
+    android:padding="16dp"
+    android:text=" Fade In Animator"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/tv_fade_out"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:textSize="20sp"
+        android:padding="16dp"
+        android:text=" Fade Out Animator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/tv_overshoot_slide_down"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:textSize="20sp"
+        android:padding="16dp"
+        android:text=" Overshoot Slide Down Animator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/tv_overshoot_slide_up"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:textSize="20sp"
+        android:padding="16dp"
+        android:text=" Overshoot Slide Up Animator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/tv_slide_down"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:textSize="20sp"
+        android:padding="16dp"
+        android:text=" Slide Down Animator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/tv_slide_up"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:textSize="20sp"
+        android:padding="16dp"
+        android:text=" Slide Up Animator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/tv_slide_left_in"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:textSize="20sp"
+        android:padding="16dp"
+        android:text=" Slide Left In Animator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/tv_slide_left_out"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:textSize="20sp"
+        android:padding="16dp"
+        android:text=" Slide Left Out Animator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tv_slide_right_in"
+            android:gravity="center"
+            android:layout_marginTop="20dp"
+            android:textSize="20sp"
+            android:padding="16dp"
+            android:text=" Slide Right In Animator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tv_slide_right_out"
+            android:gravity="center"
+            android:layout_marginTop="20dp"
+            android:textSize="20sp"
+            android:padding="16dp"
+            android:text=" Slide Right Out Animator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+</ScrollView>
